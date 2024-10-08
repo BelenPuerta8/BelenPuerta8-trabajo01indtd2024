@@ -73,6 +73,11 @@ p1_pid_FAV
 names(p1_pid_FAV$AlternativaOptima) # La mejor decisión es la alternativa d2.
 
 
+## CONCLUSIÓN FINAL ##
+# En el escenario favorable, podemos observar que mayoritariamente la
+# alternativa d2 es la más elegida.
+
+
 
 
 
@@ -120,6 +125,10 @@ p1_pid_DESFAV = criterio.PuntoIdeal(datos,F)
 p1_pid_DESFAV
 names(p1_pid_DESFAV$AlternativaOptima) # La mejor decisión es la alternativa d1.
 
+
+## CONCLUSIÓN FINAL ##
+# En el escenario desfavorable, podemos observar que mayoritariamente la
+# alternativa d1 es la más elegida.
 
 
 
@@ -181,18 +190,17 @@ datos2 = crea.tablaX(c(15, 7, 1,
                        25, 3, 1), numalternativas = 4, numestados = 3)
 datos2
 
-Alternativa = criterio.Todos(datos2, F)
+Alternativa = criterio.Todos(datos2, favorable = T) # El inversionista tiene margen de elección para buscar maximizar ganancias, lo que indica un problema en una situación favorable.
 Alternativa
 
-########################### SOLUCIÓN ###################################### 
 #                 e1 e2 e3 Wald Optimista Hurwicz Savage Laplace Punto Ideal
-# d1              15  7  1    1        15       1     10   7.667      10.770
-# d2               5  5  5    5         5       5     20   5.000      20.100
-# d3              10  6  2    2        10       2     15   6.000      15.330
-# d4              25  3  1    1        25       1      4   9.667       5.657
-# iAlt.Opt (fav.) -- -- --   d2        d4      d2     d4      d4          d4
+# d1              15  7  1    1        15     5.2     10   7.667      10.770
+# d2               5  5  5    5         5     5.0     20   5.000      20.100
+# d3              10  6  2    2        10     4.4     15   6.000      15.330
+# d4              25  3  1    1        25     8.2      4   9.667       5.657
+# iAlt.Opt (fav.) -- -- --   d2        d4      d4     d4      d4          d4
 ############################################################################
 # Podemos observar que, mayoritariamente la mejor alternativa serían las 
-# criptomonedas. En dos ocasiones (dos criterios), se obtiene que la mejor
+# criptomonedas. Tan solo en el criterio de Wald, se obtiene que la mejor
 # alternativa serían los bonos del gobierno.
 ############################################################################
