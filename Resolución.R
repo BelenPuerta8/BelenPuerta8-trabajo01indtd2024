@@ -193,7 +193,7 @@ datos2
 Alternativa = criterio.Todos(datos2, favorable = T) # El inversionista tiene margen de elección para buscar maximizar ganancias, lo que indica un problema en una situación favorable.
 Alternativa
 
-############# ################ SOLUCIÓN ###################################
+############# ################ SOLUCIÓN ####################################
 #                 e1 e2 e3 Wald Optimista Hurwicz Savage Laplace Punto Ideal
 # d1              15  7  1    1        15     5.2     10   7.667      10.770
 # d2               5  5  5    5         5     5.0     20   5.000      20.100
