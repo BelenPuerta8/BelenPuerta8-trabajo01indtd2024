@@ -131,16 +131,68 @@ names(p1_pid_DESFAV$AlternativaOptima) # La mejor decisión es la alternativa d1
 
 
 ####################### PROBLEMA 2 ###########################
-# Un inversionista está evaluando invertir en uno de los cuatro 
-# siguientes activos financieros bajo tres posibles escenarios 
-# del mercado: mercado alcista, mercado estable, y mercado 
-# bajista. 
-#
-# Los rendimientos proyectados (en millones de euros) para los 
-# tipos de mercados nombrados anteriormente son los siguientes:
-# ACCIONES TECNOLÓGICAS: 15, 7, 1
-# BONOS DEL GOBIERNO: 5, 5, 5
-# FONDOS DE BIENES RAÍCES: 10, 6, 2
-# CRIPTOMONEDAS: 25, 3, 1
-#
-# ¿Cuál sería la opción que usted le recomendaría al inversionista?
+# Un inversionista ha decidido analizar diversas opciones de 
+# inversión, ya que busca maximizar sus ganancias bajo distintos 
+# escenarios del mercado. Tras meses de estudio y consultas con 
+# expertos financieros, ha reducido sus opciones a cuatro activos 
+# financieros que, según su análisis, presentan distintas 
+# oportunidades de rendimiento. 
+# 
+# Ha identificado tres posibles escenarios del mercado: mercado 
+# alcista, en el que se espera un crecimiento considerable de la 
+# economía; mercado estable, donde los rendimientos se mantendrán 
+# sin grandes cambios; y mercado bajista, en el que la economía 
+# enfrentará dificultades.
+# 
+# Con base en las proyecciones actuales, los rendimientos 
+# estimados para cada activo bajo estos escenarios, expresados en 
+# millones de euros, son los siguientes:
+#   
+# *Acciones tecnológicas: en un escenario alcista generarían 15 
+#                         millones, en un mercado estable producirían 
+#                         7 millones, y en un mercado bajista solo 
+#                         darían 1 millón. Este tipo de activo se ha 
+#                         caracterizadompor su enorme potencial en épocas 
+#                         de bonanza.
+# 
+# *Bonos del gobierno: se proyecta que generen un rendimiento 
+#                      constante de 5 millones sin importar el estado 
+#                      del mercado. Se consideran una opción de bajo 
+#                      riesgo, especialmente en tiempos de incertidumbre, 
+#                      debido a su estabilidad.
+# 
+# *Fondos de bienes raíces: bajo un mercado alcista podrían proporcionar 
+#                           un rendimiento de 10 millones, en un mercado 
+#                           estable 6 millones, y en un escenario bajista 
+#                           2 millones. 
+# 
+# * Criptomonedas: en un mercado alcista su rentabilidad podría alcanzar 
+#                  los 25 millones, en un mercado estable solo generarían 
+#                  3 millones, y en un mercado bajista apenas 1 millón. 
+#                  Este activo es conocido por su alta volatilidad.
+# 
+# Dado este panorama y los rendimientos proyectados, ¿cuál sería la opción 
+# más adecuada que recomendarías al inversionista?
+######################################################################
+
+datos2 = crea.tablaX(c(15, 7, 1,
+                       5,  5, 5,
+                       10, 6, 2,
+                       25, 3, 1), numalternativas = 4, numestados = 3)
+datos2
+
+Alternativa = criterio.Todos(datos2, F)
+Alternativa
+
+########################### SOLUCIÓN ###################################### 
+#                 e1 e2 e3 Wald Optimista Hurwicz Savage Laplace Punto Ideal
+# d1              15  7  1    1        15       1     10   7.667      10.770
+# d2               5  5  5    5         5       5     20   5.000      20.100
+# d3              10  6  2    2        10       2     15   6.000      15.330
+# d4              25  3  1    1        25       1      4   9.667       5.657
+# iAlt.Opt (fav.) -- -- --   d2        d4      d2     d4      d4          d4
+############################################################################
+# Podemos observar que, mayoritariamente la mejor alternativa serían las 
+# criptomonedas. En dos ocasiones (dos criterios), se obtiene que la mejor
+# alternativa serían los bonos del gobierno.
+############################################################################
