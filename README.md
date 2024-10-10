@@ -10,5 +10,5 @@ El presente trabajo consiste en enunciar y resolver dos problemas de Teoría de 
 - **Enunciados.R**: Archivo que contiene los enunciados de los problemas propuestos.
 - **Resolución.R**: Archivo que contiene los enunciados de los problemas propuestos y sus correspondientes resoluciones con el desarrollo de conocimientos, funciones y conclusiones.
 - **teoriadecision_funciones_incertidumbre.R**: Archivo que contiene todas las funciones para definir los distintos criterios. 
-- **BelenPuerta8-trabajo01indtd2024.Rproj**: Proyecto creado en R para el desarrollo del trabajo.
+- **trabajo01indtd2024.Rproj**: Proyecto creado en R para el desarrollo del trabajo.
 
